@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>business</title>
+		<meta name="description" content="" />
+		<meta name="author" content="tianyun" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="stylesheet" href="../css/base-frame.css"/>
+	</head>
+	<body>
+		<!--业务内容区域-->
+		<div class="content" id="content">
+			<div class="tip tip-info">
+				<a class="close">×</a>
+				<span style="color:black">五矿合同管理系统软件开发服务合同</span>
+				<span style="">流程：销售合同审批</span>
+				<span>申请人：陈大中</span>
+				<span class="date">四天前</span>
+			</div>
+			<div class="fly-nav fold" id="contract-nav">
+				<div>
+					<a href="javascript:void()">快速导航</a>
+				</div>
+				<div class="sub-title">
+					<a href="#contract-info" class="contract-info">合同信息</a>
+				</div>
+				<div class="sub-title">
+					<a href="#flow-info" class="flow-info">流转意见</a>
+				</div>
+				<div class="sub-title">
+					<a href="#attach-info" class="attach-info">附件信息</a>
+				</div>
+				<div class="sub-title">
+					<a href="#others" class="others">其他信息</a>
+				</div>
+				<div class="close">
+					<a href="javascript:void()">_</a>
+				</div>
+			</div>
+			<div class="subheader">
+				<div id="tabs">
+					<a   class="business youarehere">业务办理</a>
+					<a  class="flow xspLink">流程跟踪</a>
+					<a  class="standard xspLink">流程规范</a>
+				</div>
+			</div>
+			<div id="business-content">
+				<section id="contract-info">
+					<div class="section-head">
+						合同信息 <a class="section-open"></a>
+					</div>
+					<div class="section-body" style="height:200px;"></div>
+				</section>
+				<section id="flow-info">
+					<div class="section-head">
+						流转信息 <a class="section-open"></a>
+					</div>
+					<div class="section-body" style="height:200px;"></div>
+				</section>
+				<section id="attach-info">
+					<div class="section-head">
+						附件信息 <a class="section-open"></a>
+					</div>
+					<div class="section-body" style="height:200px;"></div>
+				</section>
+				<section id="others">
+					<div class="section-head">
+						其他信息 <a class="section-open"></a>
+					</div>
+					<div class="section-body" style="height:200px;"></div>
+				</section>
+			</div>
+			<iframe id="ifr-graph" style="width:100%;height:100%;border:none;display: none"></iframe>
+		</div>
+		<!--/业务内容区域-->
+		<!--表单操作区域-->
+		<div class="sidebar" id="widget" style="position: absolute">
+			<div class="second">
+				<a style="color:blue;cursor: pointer" id="operate_back">返回</a>
+			</div>
+			<div class="first" id="operate_first">
+				<div class="accordion-group accordion-group-fixed" >
+					<div class="accordion-heading accordion-heading-fixed">
+						<button type="button" class="fixed-button" id="button">
+							暂存
+						</button>
+						<button type="button"  class="fixed-button" >
+							退出
+						</button>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" data-toggle="collapse"><span class="divider-vertical">提示</span></a>
+					</div>
+					<div class="accordion-body">
+						<p>
+							1、已<a style="color:red">超时一天</a>，请速度办理
+						</p>
+						<p>
+							2、由部门经理审批驳回
+						</p>
+						<p>
+							3、本任务委托自张三
+						</p>
+						<p>
+							4、您可以<a style="color:#004499">设置后继环节人</a>
+						</p>
+						<p>
+							5、您可以<a style="color:#004499">先征询意见</a>
+						</p>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" data-toggle="collapse"><span class="divider-vertical">意见</span></a>
+					</div>
+					<div class="accordion-body">
+						<table class="table-comments">
+							<tbody>
+								<tr>
+									<td>
+									<input type="radio" checked="" name="view:_id1:_id18:_id248:radioGroup1" value="0">
+									通过</input></td>
+									<td>
+									<input type="radio" name="view:_id1:_id18:_id248:radioGroup1" value="1">
+									不通过</input></td>
+								</tr>
+								<tr>
+									<td colspan="2">									<textarea id="view:_id1:_id18:_id248:comments-content" name="view:_id1:_id18:_id248:comments-content" style="width:98%;margin-bottom:0px;border: 1px solid #CCC;
+border-radius: 4px;" class="sweet-tooltip" title="双击进入意见助手区域"></textarea></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="text-align: right;"><a  id="comments_input">快捷输入</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" data-toggle="collapse"><i class="icon-globe icon-white"></i><span class="divider-vertical"></span>下一步操作</a>
+					</div>
+					<div class="accordion-body">
+						<ul class="branch">
+							<li class="selected">
+								<i class="dot"></i><span>总经理审批</span>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<div class="inner">
+									<span>执行人:</span>
+									<span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span>
+								</div>
+							</div>
+						</ul>
+						<div class="operates">
+							<button class="button blue" id="submit">
+								提交
+							</button>
+						</div>
+						<div class="operates">
+							<button class="button">
+								驳回
+							</button>
+							<button class="button">
+								转办
+							</button>
+						</div>
+						<div class="clx"></div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">下一步操作</span></a>
+					</div>
+					<div class="accordion-body">
+						<ul class="branch">
+							<li class="selected">
+								<label for="radio1" class="radio">
+									<input  id="radio1" type="radio"  checked="checked" name="group1" value="0">
+									转总经理</input> </label>
+								<span class="to">→</span>
+								<span class="process">总经理审批</span>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<div class="inner">
+									<span>执行人:</span>
+									<span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span>
+								</div>
+							</div>
+							<li>
+								<label for="radio2" class="radio">
+									<input  id="radio2" type="radio"   name="group1" value="0">
+									转办公室</input> </label>
+								<span class="to">→</span>
+								<span class="process">办公室审批</span>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<div class="inner">
+									<span>执行人:</span>
+									<span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">下一步操作</span></a>
+					</div>
+					<div class="accordion-body">
+						<ul class="branch">
+							<li class="selected">
+								<label for="radio3" class="radio">
+									<input  id="radio3" type="radio"  checked="checked" name="group1" value="0">
+									数据复制</input> </label>
+								<span class="to">→</span>
+								<span class="process">总经理审批</span>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<table class="person-data">
+									<tr>
+										<td>处理人：</td>
+										<td style="text-align: right;"><a>修改</a></a></td>
+									</tr>
+									<tr class="inner">
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+									</tr>
+									<tr class="inner">
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+									</tr>
+								</table>
+							</div>
+							<li>
+								<label for="radio4" class="radio">
+									<input  id="radio4" type="radio"   name="group1" value="0">
+									转办公室</input> </label>
+								<span class="to">→</span>
+								<span class="process">办公室审批</span>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<table class="person-data">
+									<tr>
+										<td>处理人：</td>
+										<td style="text-align: right;"><a>修改</a></td>
+									</tr>
+									<tr class="inner">
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+									</tr>
+									<tr class="inner">
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+										<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+									</tr>
+								</table>
+							</div>
+							<li>
+								<label for="radio5" class="radio">
+									<input  id="radio5" type="radio"   name="group1" value="0">
+									转办公室</input> </label>
+								<span class="to">→</span>
+								<span class="process">办公室审批</span>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<div class="inner">
+									<table class="person-data">
+										<tr>
+											<td>处理人：</td>
+											<td style="text-align: right;"><a>修改</a></td>
+										</tr>
+										<tr class="inner">
+											<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+											<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+										</tr>
+										<tr class="inner">
+											<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+											<td><span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">下一步操作</span></a>
+					</div>
+					<div class="accordion-body" >
+						<!--
+						<ul class="branch contract-branch" >
+						<li >
+						<i class="dot"></i><span>合同金额</span><span class="to">→</span><span class="process">小于<a style="color:green">20</a>万</span>
+						</li>
+						<li class="nbsp">
+						<span class="to">→</span><span class="process">办公室审批</span>
+						</li>
+						<li class="nbsp">
+						<span class="to bold">→</span><span class="process bold">办公室审批</span>
+						</li>
+						<div class="item-branch">
+						<div><span class="to">→</span><span class="process">办公室审批</span></div>
+						<div><span class="to">→</span><span class="process">办公室审批</span></div>
+						<div><span class="to">→</span><span class="process">办公室审批</span></div>
+						</div>
+						</ul>
+						
+						<div class="branch-items clearfix">
+							<div class="item-title">
+								<span>合同金额百万判断</span>
+							</div>
+							<div class="item-branch">
+								<div class="item-branch-inner">
+									<div class="to">
+										→
+									</div>
+									<div class="process">
+										办公室审批
+									</div>
+								</div>
+								<div class="item-branch-inner">
+									<div class="to">
+										→
+									</div>
+									<div class="process">
+										办公室审批
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="branch-items">
+							<div class="item-title">
+								<span>合同金额百万判断:</span>
+							</div>
+							<div class="item-branch">
+								<div class="item-branch-inner clearfix">
+									<span class="to">→</span><span class="process">办公室审批</span>
+								</div>
+
+							</div>
+						</div>
+					-->
+					<ul class="branch">
+						<li class="selected">
+							<div class="item-title">
+								<span>合同金额百万判断:</span>
+							</div>
+							<div class="item-branch">
+								<div class="item-branch-inner clearfix">
+									<span class="to">→</span><span class="process">办公室审批</span>
+								</div>
+
+							</div>
+						</li>
+					</ul>
+						<div class="tip-vCard">
+							<div class="arrow arXYt">
+								<span class="out">◆</span>
+								<span class="inside aiXYt">◆</span>
+							</div>
+							<div class="inner">
+								<span>执行人:</span>
+								<span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">驳回</span></a>
+					</div>
+					<div class="accordion-body">
+						<ul class="branch">
+							<li class="selected">
+								<label for="radio6" class="radio">
+									<input  id="radio6" type="radio"  checked="checked" name="group1" value="0">
+									转总经理</input> </label>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<div class="inner">
+									<span>执行人:</span>
+									<span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span>
+								</div>
+							</div>
+							<li>
+								<label for="radio7" class="radio">
+									<input  id="radio7" type="radio"   name="group1" value="0">
+									转办公室</input> </label>
+							</li>
+							<div class="tip-vCard">
+								<div class="arrow arXYt">
+									<span class="out">◆</span>
+									<span class="inside aiXYt">◆</span>
+								</div>
+								<div class="inner">
+									<span>执行人:</span>
+									<span class="vCard"> <span class="title"> <img src="../images/headshot.png" class="title"></img> </span> <span class="name">姜晓丹</span> </span>
+								</div>
+							</div>
+						</ul>
+						<div class="operates">
+							<button class="button blue">
+								驳回
+							</button>
+						</div>
+						<div class="clx"></div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">会签状态</span><span style="float:right;padding-right: 10%;">刷新</span></a>
+					</div>
+					<div class="accordion-body">
+						<ul class="branch hq">
+							<li>
+								<i class="clock"></i><span>财务部</span><i class="close">×</i>
+							</li>
+							<li>
+								<i class="clock"></i><span>办公室</span><i class="close">×</i>
+							</li>
+							<li>
+								<i class="ok"></i><span><i class="person"></i>王双：<em>通过需要修改</em></span><i class="close">×</i>
+							</li>
+							<li>
+								<i class="ok"></i><span><i class="person"></i>王继伟：<em>不通过</em></span><i class="close">×</i>
+							</li>
+						</ul>
+						<div class="operates">
+							<button class="button blue">
+								加签
+							</button>
+						</div>
+						<div class="clx"></div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">加签</span></a>
+					</div>
+					<div class="accordion-body">
+						<ul class="branch">
+							<li>
+								<a class="a-button">人员</a><a class="a-button">部门</a>
+							</li>
+							<li>
+								<div style="width:100%;height:100px;border:1px solid #e3e3e3;"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">发起协办</span></a>
+					</div>
+					<div class="accordion-body">
+						<table class="table-comments">
+							<tbody>
+								<tr>
+									<td>选择协办人</td>
+								</tr>
+								<tr>
+									<td>
+									<form class="choose">
+										<input type="text" style="width:100%">
+										</input> <a href="javascript:void(0)" class="icon"> <i class="icon-people"></i> </a>
+									</form></td>
+								</tr>
+								<tr>
+									<td>填写协办说明</td>
+								</tr>
+								<tr>
+									<td>									<textarea name="view:_id1:_id18:_id248:comments-content" style="width:98%;margin-bottom:0px;border: 1px solid #CCC;
+border-radius: 4px;" class="sweet-tooltip" title="双击进入意见助手区域"></textarea></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="operates">
+							<button class="button blue">
+								发起协办
+							</button>
+						</div>
+						<div class="clx"></div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" ><span class="divider-vertical">协办操作</span></a>
+					</div>
+					<div class="accordion-body">
+						<div class="clx">
+							<div style="float:left;width:40px;margin-right:10px;">
+								<img style="height:40px" src="../images/headshot.png"></img>
+								<div style="text-align:center">
+									吕翊
+								</div>
+							</div>
+							<div class="tipbox" style="display: table-cell;">
+								<div class="arrow arXYl">
+									<span class="out">◆</span>
+									<span class="inside aiXYl">◆</span>
+								</div>
+								<div>
+									帮我看一下这些意见怎么处理，怎么处理？
+								</div>
+							</div>
+						</div>
+						<div class="clx">
+							<div style="float:right;width:40px;margin-left: 10px;">
+								<img style="height:40px" src="../images/headshot.png"></img>
+								<div style="text-align:center">
+									吕翊
+								</div>
+							</div>
+							<div class="tipbox" style="display: table-cell;width: 999em;">
+								<div class="arrow arXYr">
+									<span class="out">◆</span>
+									<span class="inside aiXYr">◆</span>
+								</div>
+								<div>
+									<span>帮我看一下这些意见怎么处理!</span>
+									<div style="background-color:#D6EDFD;">
+										<span><b>附件：</b>合同文档.doc</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/表单操作区域-->
+		<!--javascript -->
+		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js" ></script>
+		<script src="../js/frame.js"></script>
+		<script src="../js/bar-frame.js"></script>
+	</body>
+</html>

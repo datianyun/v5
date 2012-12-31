@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>business</title>
+		<meta name="description" content="" />
+		<meta name="author" content="tianyun" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="stylesheet" href="../css/base-frame.css"/>
+	</head>
+	<body>
+		<!--业务内容区域-->
+		<div class="content" id="content">
+			<div class="tip tip-info">
+				<a class="close">×</a>
+				<span style="color:black">五矿合同管理系统软件开发服务合同</span>
+				<span style="">流程：销售合同审批</span>
+				<span>申请人：陈大中</span>
+				<span class="date">四天前</span>
+			</div>
+
+			<div class="fly-nav fold" id="contract-nav">
+				<div>
+					<a href="javascript:void()">快速导航</a>
+				</div>
+				<div class="sub-title">
+					<a href="#contract-info" class="contract-info">合同信息</a>
+				</div>
+				<div class="sub-title">
+					<a href="#flow-info" class="flow-info">流转意见</a>
+				</div>
+				<div class="sub-title">
+					<a href="#attach-info" class="attach-info">附件信息</a>
+				</div>
+				<div class="sub-title">
+					<a href="#others" class="others">其他信息</a>
+				</div>
+				<div class="close">
+					<a href="javascript:void()">_</a>
+				</div>
+			</div>
+			<div class="subheader">
+				<div id="tabs">
+					<a   class="business youarehere">业务办理</a>
+					<a  class="flow xspLink">流程跟踪</a>
+					<a  class="standard xspLink">流程规范</a>
+				</div>
+			</div>
+		<div id="business-content">
+			<section id="contract-info">
+				<div class="section-head">
+					合同信息 <a class="section-open"></a>
+				</div>
+				<div class="section-body" style="height:200px;"></div>
+			</section>
+			<section id="flow-info">
+				<div class="section-head">
+					流转信息 <a class="section-open"></a>
+				</div>
+				<div class="section-body" style="height:200px;"></div>
+			</section>
+			<section id="attach-info">
+				<div class="section-head">
+					附件信息 <a class="section-open"></a>
+				</div>
+				<div class="section-body" style="height:200px;"></div>
+			</section>
+			<section id="others">
+				<div class="section-head">
+					其他信息 <a class="section-open"></a>
+				</div>
+				<div class="section-body" style="height:200px;"></div>
+			</section>
+		</div>
+            <iframe id="ifr-graph" style="width:100%;height:100%;border:none;display: none"></iframe>
+		</div>
+		<!--/业务内容区域-->
+		<!--表单操作区域-->
+		<div class="sidebar" id="widget">
+			<div class="second">
+								<div class="accordion-group accordion-group-fixed" >
+					<div class="accordion-heading accordion-heading-fixed">
+						<a type="button"  id="back">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="first" id="operate_first">
+				<div class="accordion-group accordion-group-fixed" >
+					<div class="accordion-heading accordion-heading-fixed">
+						<button type="button" class="fixed-button" id="button">
+							暂存
+						</button>
+						<button type="button"  class="fixed-button" >
+							退出
+						</button>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" data-toggle="collapse"><span class="divider-vertical"></span>提示</a>
+					</div>
+					<div class="accordion-body">
+						<p>
+							1、已<a style="color:red">超时一天</a>，请速度办理
+						</p>
+						<p>
+							2、由部门经理审批驳回
+						</p>
+						<p>
+							3、本任务委托自张三
+						</p>
+						<p>
+							4、您可以<a style="color:#004499">设置后继环节人</a>
+						</p>
+						<p>
+							5、您可以<a style="color:#004499">先征询意见</a>
+						</p>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" data-toggle="collapse"><span class="divider-vertical"></span>意见</a>
+					</div>
+					<div class="accordion-body">
+						<table class="table-comments">
+							<tbody>
+								<tr>
+									<td>
+									<input type="radio" checked="" name="view:_id1:_id18:_id248:radioGroup1" value="0">
+									通过</input></td>
+									<td>
+									<input type="radio" name="view:_id1:_id18:_id248:radioGroup1" value="1">
+									不通过</input></td>
+								</tr>
+								<tr>
+									<td colspan="2">									<textarea   title="双击进入意见助手区域"></textarea></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="text-align: right;"><a  id="comments_input">快捷输入</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading ">
+						<a class="accordion-toggle" data-toggle="collapse"><i class="icon-globe icon-white"></i><span class="divider-vertical"></span>下一步操作</a>
+					</div>
+					<div class="accordion-body">
+				
+							<ul class="branch">
+								<li class="selected"><i class="dot"></i><span>总经理审批</span></li>
+														<div class="tip-vCard">
+							<div class="arrow arXYt">
+								<span class="out">◆</span>
+								<span class="inside aiXYt">◆</span>
+							</div>
+							<div class="inner">
+								<span>执行人:</span>
+								<span class="vCard">
+								   <span class="title">
+								   	     <img src="../images/headshot.png" class="title"></img>
+								   </span>
+								   <span class="name">姜晓丹</span>
+								</span>
+							</div>
+						</div>
+							</ul>
+
+
+						<div class="operates">
+							<button class="button blue" id="submit">提交</button>
+						</div>
+						<div class="operates">
+							<button class="button">驳回</button>
+							<button class="button">转办</button>
+						</div>
+						<div class="clx"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/表单操作区域-->
+		<!--javascript -->
+		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js" ></script>
+		<script src="../js/frame.js"></script>
+		<script src="../js/base-frame.js"></script>
+	</body>
+</html>
